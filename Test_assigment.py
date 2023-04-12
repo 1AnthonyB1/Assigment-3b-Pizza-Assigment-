@@ -18,7 +18,6 @@ elif CapsSize == "XL":
 #Calculation for Number's of toppings to Price
 Toppings = (input("\nWhat Number of toppings do you want: \n 1,2, 3 or 4? \nType Number of Toppings:"))
 
-
 #Variations of 1
 CapsToppings = str.upper(Toppings)
 if Toppings == "1":
