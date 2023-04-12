@@ -40,7 +40,7 @@ elif CapsToppings == "THREE":
 #Variations of 3
 elif Toppings == "4":
     Price = Price + 3.35
-elif CapsToppings == "THREE":
+elif CapsToppings == "FOUR":
     Price = Price + 3.35
 
 #Calculation Pizza Price into Pizza Price + Tax
