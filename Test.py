@@ -8,12 +8,27 @@ if CapsSize == "LARGE":
 elif CapsSize == "L":
     Price = 6.00
 
-
 #Extra large Recignition & Price Calculation
 elif CapsSize == "EXTRA LARGE":
     Price = 10.00
 elif CapsSize == "XL":
     Price = 10.00
+
+#Size Flag Check
+Flag = 0
+if CapsSize == "EXTRA LARGE":
+    Flag = Flag + 1
+elif CapsSize == "XL":
+    Flag = Flag + 1
+elif CapsSize == "L":
+    Flag = Flag + 1
+elif CapsSize == "LARGE":
+    Flag = Flag + 1
+
+#Size Valid Imput Check
+if Flag == 0:
+    print()
+    print("Invalid Imput")
 
 #Calculation for Number's of toppings to Price
 Toppings = (input("\nWhat Number of toppings do you want: \n1,2,3 or 4? \nType Number of Toppings:"))
@@ -42,6 +57,30 @@ elif Toppings == "4":
     Price = Price + 3.35
 elif CapsToppings == "FOUR":
     Price = Price + 3.35
+
+#Size Flag Check
+Flag = 0
+if CapsSize == "ONE":
+    Flag = Flag + 1
+elif CapsSize == "TWO":
+    Flag = Flag + 1
+elif CapsSize == "THREE":
+    Flag = Flag + 1
+elif CapsSize == "FOUR":
+    Flag = Flag + 1
+elif CapsSize == "1":
+    Flag = Flag + 1
+elif CapsSize == "2":
+    Flag = Flag + 1
+elif CapsSize == "3":
+    Flag = Flag + 1
+elif CapsSize == "4":
+    Flag = Flag + 1
+
+#Size Valid Imput Check
+if Flag == Flag<2:
+    print()
+    print("Invalid Imput")
 
 #Calculation Pizza Price into Pizza Price + Tax
 
