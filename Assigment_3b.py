@@ -1,4 +1,4 @@
-#Calculation for Size to Price
+#Catilculaon for Size to Price
 
 Size = (input("\nWhat Size of Pizza would you like: \nLarge? or Extra Large? \nType Size:"))
 
@@ -71,5 +71,3 @@ print()
 print("This is your Subtotal:", FinalPrice - TaxPrice)
 print("This is your Tax:",TaxPrice)
 print("This is your Final Price:", FinalPrice)
-
-Print("Here is your Pizza Felix")
