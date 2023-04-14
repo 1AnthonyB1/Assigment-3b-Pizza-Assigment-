@@ -2,33 +2,26 @@
 Size = (input("\nWhat Size of Pizza would you like: \nLarge? or Extra Large? \nType Size:"))
 Flag = 0
 Flag2 = 0
-Isok = False
 
-while Isok == False:
+while CapsSize != "LARGE" and CapsSize != "EXTRA LARGE" and Size != "xl" and Size != "l":
+    CapSize = input('What size pizza? ').upper()
+
 #Large Recignition & Price Calculation
     CapsSize = str.upper(Size)
-    if CapsSize == "LARGE":
-        Price = 6.00
+    if CapsSize == "LARGE" or CapsSize == "L":
+        price = price + 6.00
         Flag = Flag + 1
-        Isok = True
-    elif CapsSize == "L":
-        Price = 6.00
-        Flag = Flag + 1
-        Isok = True
 
 #Extra large Recignition & Price Calculation
-    elif CapsSize == "EXTRA LARGE":
-        Price = 10.00
+    elif CapsSize == "EXTRA LARGE" or CapsSize == "XL":
+        price = price + 10.00
         Flag = Flag + 1
-        Isok = True
-    elif CapsSize == "XL":
-        Price = 10.00
-        Flag = Flag + 1
-        Isok = True
 #Size Valid Imput Check
     if Flag == 0:
         print()
         print("Invalid Imput")
+
+    if Flag == 0:
 
 #Calculation for Number's of toppings to Price
 Toppings = (input("\nWhat Number of toppings do you want: \n1,2,3 or 4? \nType Number of Toppings:"))
