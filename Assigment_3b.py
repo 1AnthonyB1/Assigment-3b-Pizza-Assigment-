@@ -17,7 +17,7 @@ while True:
 #Size Valid Imput Check
     if Flag == 0:
         print()
-        print("Invalid Imput")
+        print("Invalid Input")
 
     if Flag == 1:
         break
@@ -53,7 +53,7 @@ while True:
 #Size Valid Imput Check
     if Flag2 == 0:
         print()
-        print("Invalid Imput")
+        print("Invalid Input")
 
     if Flag2 == 1:
         break
