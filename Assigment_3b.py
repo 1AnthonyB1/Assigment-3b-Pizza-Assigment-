@@ -1,90 +1,66 @@
 #Calculations for Size to Price
-Size = (input("\nWhat Size of Pizza would you like: \nLarge? or Extra Large? \nType Size:"))
-Flag = 0
-Flag2 = 0
+while True:
+    Flag = 0
+    Size = (input("\nWhat Size of Pizza would you like: \nLarge? or Extra Large? \nType Size:"))
+    price = 0 
 
 #Large Recignition & Price Calculation
-CapsSize = str.upper(Size)
-if CapsSize == "LARGE":
-    Price = 6.00
-elif CapsSize == "L":
-    Price = 6.00
+    CapsSize = str.upper(Size)
+    if CapsSize == "LARGE" or CapsSize == "L":
+        price = 6.00
+        Flag = Flag + 1
 
 #Extra large Recignition & Price Calculation
-elif CapsSize == "EXTRA LARGE":
-    Price = 10.00
-elif CapsSize == "XL":
-    Price = 10.00
-
-#Size Flag Check
-if CapsSize == "EXTRA LARGE":
-    Flag = Flag + 1
-elif CapsSize == "XL":
-    Flag = Flag + 1
-elif CapsSize == "L":
-    Flag = Flag + 1
-elif CapsSize == "LARGE":
-    Flag = Flag + 1
-
+    elif CapsSize == "EXTRA LARGE" or CapsSize == "XL":
+        price = 10.00
+        Flag = Flag + 1
 #Size Valid Imput Check
-if Flag == 0:
-    print()
-    print("Invalid Imput")
+    if Flag == 0:
+        print()
+        print("Invalid Imput")
+
+    if Flag == 1:
+        break
+
 
 #Calculation for Number's of toppings to Price
-Toppings = (input("\nWhat Number of toppings do you want: \n1,2,3 or 4? \nType Number of Toppings:"))
-ToppingsSize = str.upper(Toppings)
+while True:
+    Toppings = (input("\nWhat Number of toppings do you want: \n1,2,3 or 4? \nType Number of Toppings:"))
+    ToppingsSize = str.upper(Toppings)
+    Flag2 = 0
 
 #Variations of 1
-CapsToppings = str.upper(Toppings)
-if Toppings == "1":
-    Price = Price + 1.00
-elif CapsToppings == "ONE":
-    Price = Price + 1.00
+    CapsToppings = str.upper(Toppings)
+    if Toppings == "1" or CapsToppings == "ONE":
+        price = price + 1.00
+        Flag2 = Flag2 + 1
 
 #Variations of 2
-elif Toppings == "2":
-    Price = Price + 1.75
-elif CapsToppings == "TWO":
-    Price = Price + 1.75
+    elif Toppings == "2" or CapsToppings == "TWO":
+        price = price + 1.75
+        Flag2 = Flag2 + 1
 
 #Variations of 3
-elif Toppings == "3":
-    Price = Price + 2.50
-elif CapsToppings == "THREE":
-    Price = Price + 2.50
+    elif Toppings == "3" or CapsToppings == "THREE":
+        price = price + 2.50
+        Flag2 = Flag2 + 1
 
 #Variations of 3
-elif Toppings == "4":
-    Price = Price + 3.35
-elif CapsToppings == "FOUR":
-    Price = Price + 3.35
+    elif Toppings == "4" or CapsToppings == "FOUR":
+        price = price + 3.35
+        Flag2 = Flag2 + 1
 
-#Toppings Flag Check
-if ToppingsSize == "ONE":
-    Flag2 = Flag2 + 1
-elif ToppingsSize == "TWO":
-    Flag2 = Flag2 + 1
-elif ToppingsSize == "THREE":
-    Flag2 = Flag2 + 1
-elif ToppingsSize == "FOUR":
-    Flag2 = Flag2 + 1
-elif Toppings == "1":
-    Flag2 = Flag2 + 1
-elif Toppings == "2":
-    Flag2 = Flag2 + 1
-elif Toppings == "3":
-    Flag2 = Flag2 + 1
-elif Toppings == "4":
-    Flag2 = Flag2 + 1
 #Size Valid Imput Check
-if Flag2 == 0:
-    print()
-    print("Invalid Imput")
+    if Flag2 == 0:
+        print()
+        print("Invalid Imput")
+
+    if Flag2 == 1:
+        break
 
 #Calculation Pizza Price into Pizza Price + Tax
-TaxPrice = (float(Price)*0.13)
-FinalPrice = (TaxPrice+Price)
+TaxPrice = (float(price)*0.13)
+FinalPrice = (TaxPrice + price)
 
 print()
 print("This is your Subtotal: $",FinalPrice - TaxPrice)
